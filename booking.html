@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Booking Section */
+.booking-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.booking-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-section label {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    display: block;
+}
+
+.booking-section input,
+.booking-section select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.booking-section button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-section button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <section id="booking" class="booking-section">
+        <h2>Book Your Travel</h2>
+        <form action="submit-booking.php" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="destination">Choose a Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="destination1">Destination 1</option>
+                <option value="destination2">Destination 2</option>
+                <option value="destination3">Destination 3</option>
+            </select>
+            
+            <label for="date">Travel Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+    
+</body>
+</html>

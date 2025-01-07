@@ -1,0 +1,1015 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    color: white;
+}
+
+/* Full-page background with dark overlay */
+body {
+    background: url('background-image.jpg') no-repeat center center/cover;
+    height: 100%;
+    position: relative;
+}
+
+/* Dark overlay to ensure text visibility */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay with 60% opacity */
+    z-index: -1;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Transparent background for the header */
+    position: relative;
+}
+
+#logo img {
+    max-height: 30px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Main Banner Section */
+.banner {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 24px;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.service-item {
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Instagram Section */
+.instagram {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.instagram-photos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.instagram-photos img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.about-us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .instagram-photos {
+        flex-direction: column;
+    }
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: darker background */
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image {
+    width: 300px; /* Adjust image size */
+    height: 200px;
+    object-fit: cover;
+    opacity: 0; /* Start with invisible images */
+    animation: fadeIn 2s forwards; /* Animation will run for 2 seconds */
+}
+
+.image:nth-child(1) {
+    animation-delay: 0.5s; /* Delay for first image */
+}
+
+.image:nth-child(2) {
+    animation-delay: 1s; /* Delay for second image */
+}
+
+.image:nth-child(3) {
+    animation-delay: 1.5s; /* Delay for third image */
+}
+
+.image:nth-child(4) {
+    animation-delay: 2s; /* Delay for fourth image */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Invisible at start */
+    }
+    100% {
+        opacity: 1; /* Fully visible at end */
+    }
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: darker background */
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image {
+    width: 300px; /* Adjust image size */
+    height: 200px;
+    object-fit: cover;
+    transform: scale(0.8); /* Start with smaller images */
+    opacity: 0; /* Start with invisible images */
+    animation: zoomIn 2s forwards; /* Animation will run for 2 seconds */
+}
+
+.image:nth-child(1) {
+    animation-delay: 0.5s; /* Delay for first image */
+}
+
+.image:nth-child(2) {
+    animation-delay: 1s; /* Delay for second image */
+}
+
+.image:nth-child(3) {
+    animation-delay: 1.5s; /* Delay for third image */
+}
+
+.image:nth-child(4) {
+    animation-delay: 2s; /* Delay for fourth image */
+}
+
+/* Zoom-in animation */
+@keyframes zoomIn {
+    0% {
+        opacity: 0; /* Invisible at start */
+        transform: scale(0.8); /* Smaller size */
+    }
+    100% {
+        opacity: 1; /* Fully visible at end */
+        transform: scale(1); /* Original size */
+    }
+}
+
+/* Limit the image size in the gallery */
+.image {
+    width: 200px; /* Reduce width */
+    height: 150px; /* Reduce height */
+    object-fit: cover; /* Ensures images are cropped proportionally */
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('background-image.jpg') center/cover no-repeat;
+    color: white;
+}
+
+.welcome-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.welcome-container p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn-get-started {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-get-started:hover {
+    background-color: #0056b3;
+}
+
+/* Featured Destinations */
+.featured-destinations {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.featured-destinations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.destination-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.destination-card {
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    background-color: white;
+    text-align: left;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 15px;
+    color: #007bff;
+}
+
+.destination-card p {
+    font-size: 1rem;
+    margin: 5px 15px 15px;
+    color: #555;
+}
+
+/* Featured Destinations */
+.featured-destinations {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.featured-destinations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.destination-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.destination-card {
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    background-color: white;
+    text-align: left;
+    padding: 20px;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #007bff;
+}
+
+.destination-card p {
+    font-size: 1rem;
+    margin: 5px 0 15px;
+    color: #555;
+}
+
+/* Rating Stars */
+.destination-rating {
+    margin: 10px 0;
+}
+
+.star {
+    color: #ffcc00;
+    font-size: 1.2rem;
+}
+
+.rating-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Price Section */
+.price {
+    font-size: 1.2rem;
+    color: #28a745;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Book Now Button */
+.btn-book-now {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-book-now:hover {
+    background-color: #0056b3;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+    font-style: italic;
+}
+
+.testimonial-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.rating {
+    font-size: 1.2rem;
+    color: #ffcc00;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #28a745;
+    color: white;
+}
+
+.newsletter-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.newsletter-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.newsletter-section form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter-section input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.newsletter-section .btn-submit {
+    background-color: #fff;
+    color: #28a745;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-section .btn-submit:hover {
+    background-color: #218838;
+    color: white;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background-color: #fff;
+    color: #28a745;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #218838;
+    color: white;
+}
+
+.contact-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.map iframe {
+    border: 0;
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: auto;
+    height: auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+.footer-contact p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none; /* Hidden by default */
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.blog-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    background-color: white;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.blog-card h3 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.blog-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.blog-card .btn-read-more {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-card .btn-read-more:hover {
+    color: #0056b3;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFEB3B; /* Yellow Background */
+    padding: 15px 30px;
+    color: black; /* Change text color to contrast with yellow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation Styling */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black; /* Change link color to black */
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #007bff; /* Highlight color for links */
+}
+
+/* Search Bar Styling */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 8px 15px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.search-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-container {
+        margin-top: 15px;
+    }
+
+    .search-container input {
+        width: 150px;
+    }
+}
+
+/* Featured Destinations Section */
+.destinations-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.destinations-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.destination-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.destination-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.destination-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.destination-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+
+.destination-card .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+.footer-social a {
+    margin: 0 15px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social img:hover {
+    opacity: 0.7;
+}
