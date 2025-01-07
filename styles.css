@@ -118,26 +118,6 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* Instagram Section */
-.instagram {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.instagram-photos {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.instagram-photos img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
 /* About Us Section */
 .about-us {
     padding: 50px 20px;
@@ -1012,4 +992,185 @@ footer {
 
 .footer-social img:hover {
     opacity: 0.7;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.social-media-icons a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media-icons a:hover {
+    color: #007bff; /* Blue color on hover */
+    transform: scale(1.2); /* Slight zoom effect */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card img {
+    border-radius: 10px 10px 0 0;
+}
+header {
+    background: linear-gradient(90deg, #f6d365, #fda085);
+}
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+#back-to-top:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 1s ease forwards;
+}
+
+.booking-filters {
+    padding: 50px 20px;
+    background: #f8f9fa;
+    text-align: center;
+}
+.booking-filters h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+.booking-filters form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.booking-filters select, .booking-filters button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.booking-filters button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.booking-filters button:hover {
+    background: #0056b3;
+}
+
+.video-section {
+    padding: 50px 20px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+.video-section h2 {
+    margin-bottom: 20px;
+}
+.video-section video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blog-section {
+    padding: 50px 20px;
+    background: #f8f9fa;
+    text-align: center;
+}
+.blog-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+.blog-section p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+.blog-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.blog-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.blog-card img {
+    width: 100%;
+    height: auto;
+}
+.blog-content {
+    padding: 15px;
+    text-align: left;
+}
+.blog-content h3 {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+.blog-content p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+.read-more {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+.read-more:hover {
+    background: #0056b3;
 }

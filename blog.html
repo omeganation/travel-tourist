@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blog-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.blog-post {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.blog-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.blog-title {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.blog-snippet {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Default Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #0056b3; /* Darker Blue */
+    color: #ffcc00; /* Yellow Text */
+    transform: scale(1.1); /* Slightly increase size */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+.btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 15px #007bff; /* Blue Glow */
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center;    /* Centers vertically if needed */
+    height: 100px;          /* Adjust as needed */
+}
+
+</style>
+</head>
+<body>
+    <section class="blog-section">
+    <div class="container">
+        <h2 class="section-title">Travel Blogs</h2>
+        <p class="section-description">Get inspired by travel stories, tips, and destination guides.</p>
+        <div class="blog-posts">
+            <!-- Blog Post 1 -->
+            <div class="blog-post">
+                <img src="blog1.jpeg" alt="Tropical Paradise" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">Exploring Tropical Paradises</h3>
+                    <p class="blog-snippet">Discover the best tropical getaways for your next vacation.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <!-- Blog Post 2 -->
+            <div class="blog-post">
+                <img src="blog2.jpeg" alt="Mountain Adventures" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">Top Mountain Adventures</h3>
+                    <p class="blog-snippet">Embark on breathtaking mountain adventures across the globe.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <!-- Blog Post 3 -->
+            <div class="blog-post">
+                <img src="blog3.jpeg" alt="City Breaks" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">Best City Breaks</h3>
+                    <p class="blog-snippet">Uncover the charm of the world's most exciting cities.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="button-container">
+    <a href="index.html" class="btn">Back Home</a>
+</div>
+
+</body>
+</html>

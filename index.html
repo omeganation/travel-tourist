@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel & Tourist Guide</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
 </head>
 <body>
 
@@ -18,7 +20,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#destinations">Destinations</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="booking.html">Book Now</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -49,6 +51,49 @@
             <a href="#destinations" class="btn-get-started">Get Started</a>
         </div>
     </section>
+
+    <section class="video-section">
+        <h2>Explore the World</h2>
+        <video controls>
+            <source src="travel_highlights.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2>Our Travel Blog</h2>
+            <p>Discover tips, guides, and inspiring stories from travelers around the world.</p>
+            <div class="blog-cards">
+                <div class="blog-card">
+                    <img src="blog1.jpeg" alt="Blog 1">
+                    <div class="blog-content">
+                        <h3>10 Best Beaches to Visit in 2025</h3>
+                        <p>Explore the most stunning beaches around the globe for your next vacation.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="images/blog2.jpg" alt="Blog 2">
+                    <div class="blog-content">
+                        <h3>A Guide to Budget Traveling</h3>
+                        <p>Learn how to save money and travel the world on a budget.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="blog3.jpeg" alt="Blog 3">
+                    <div class="blog-content">
+                        <h3>Top Destinations for Adventure Lovers</h3>
+                        <p>Find the best places for thrilling adventures and unforgettable memories.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
     <section id="destinations" class="featured-destinations">
         <h2>Featured Destinations</h2>
         <div class="destination-container">
@@ -169,9 +214,50 @@
                     <span class="star">&#9734;</span>
                 </div>
             </div>
+            <div class="testimonial-card">
+                <img src="customer3.jpg" alt="Customer 2">
+                <p>"Please Visit Rwanda For Your vacation
+                    Just Trust Me!"</p>
+                <h4>Tuyizere Omega</h4>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <img src="customer4.jpg" alt="Customer 2">
+                <p>"Wow i Like The features From Rwanda I really Love Rwanda!"</p>
+                <h4>Keza Angel</h4>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                </div>
+            </div>
         </div>
     </section>
 
+    <section class="booking-filters">
+        <h2>Find Your Perfect Trip</h2>
+        <form>
+            <select>
+                <option value="beach">Beach</option>
+                <option value="mountain">Mountain</option>
+                <option value="city">City</option>
+            </select>
+            <select>
+                <option value="budget">Budget</option>
+                <option value="midrange">Midrange</option>
+                <option value="luxury">Luxury</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+    </section>
     
     
     <!--news latter & sign Up-->
@@ -274,11 +360,21 @@
                     <li><a href="#privacy">Privacy Policy</a></li>
                 </ul>
             </div>
-            <div class="footer-social">
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com" target="_blank" class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
+            
         </div>
     </footer>
     
@@ -312,6 +408,14 @@ document.getElementById("back-to-top").onclick = function() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=YOUR_API_KEY')
+    .then(response => response.json())
+    .then(data => {
+        const weather = data.weather[0].description;
+        const temp = (data.main.temp - 273.15).toFixed(1);
+        document.getElementById('weather-info').textContent = `${weather}, ${temp}°C`;
+    });
+
 
 </script>
 
