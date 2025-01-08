@@ -1174,3 +1174,13 @@ header {
 .read-more:hover {
     background: #0056b3;
 }
+
+.visitor-counter {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-top: 2px solid #007bff;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}

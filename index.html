@@ -361,6 +361,10 @@
                 </ul>
             </div>
             <div class="social-media-icons">
+                <div class="visitor-counter">
+                    <p>Total Visitors: <span id="visitorCount">0</span></p>
+                </div>
+                
                 <a href="https://www.facebook.com" target="_blank" class="icon">
                     <i class="fab fa-facebook-f"></i>
                 </a>
@@ -408,14 +412,31 @@ document.getElementById("back-to-top").onclick = function() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
-fetch('https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=YOUR_API_KEY')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=YOUR_API_KEY') {
     .then(response => response.json())
     .then(data => {
         const weather = data.weather[0].description;
         const temp = (data.main.temp - 273.15).toFixed(1);
         document.getElementById('weather-info').textContent = `${weather}, ${temp}°C`;
     });
+{
+    
+    // Retrieve the current visitor count from localStorage
+    let visitorCount = localStorage.getItem("visitorCount");
 
+    // If no count exists, initialize it to 1 (first visit)
+    if (!visitorCount) {
+        visitorCount = 1;
+    } else {
+        // Increment the count for returning visits
+        visitorCount = parseInt(visitorCount) + 1;
+    }
+
+    // Save the updated count back to localStorage
+    localStorage.setItem("visitorCount", visitorCount);
+
+    // Display the visitor count on the page
+    document.getElementById("visitorCount").textContent = visitorCount;
 
 </script>
 
